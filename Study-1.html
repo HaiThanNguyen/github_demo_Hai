@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="abc.css">
+</head>
+<body>
+    <section class="hero is-fullheight is-dark is-bold flex items-center justify-center h-screen w-screen" >
+  
+      <div class="hero-body">
+          <div class="container">
+              <div class="columns is-vcentered has-text-centered">
+                    <div id="app" class="column is-4 is-offset-4">
+                       <h1 class="title">
+                          Type Something
+                      </h1>
+                      <div class="card-content">
+                      <input type="text" class="input" v-model="updateMe" /> {{ updateMe }}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+  </section>
+  
+  </body>
+
+  <script>
+      new Vue({
+    el:"#app",
+    data: {
+       updateMe: ''
+    },
+});
+  </script>
+  
